@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 import requests
 
 # Create your views here.
@@ -28,5 +28,14 @@ def view_customers(request):
 
 def customer_details(request, pk):
     customer = Customer.objects.get(id = pk)
-    context={'customer':customer}
+    customers = Customer.objects.all()
+    context={'customer':customer, 'customers':customers}
+    if request.method == "POST":
+        amount = request.POST.get('amount')
+        receiver_name = request.POST.get('receiver_name')
+        sender_name = customer.name
+        customer_details = Transfer(sender_name=sender_name, amount=amount, receiver_name=receiver_name)
+        customer_details.save()
+        
     return render(request,'customer_details.html',context)
+    

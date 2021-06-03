@@ -10,3 +10,11 @@ class Customer(models.Model):
 
     def __str__(self):
         return self.name
+
+class Transfer(models.Model):
+    sender_name = models.CharField(max_length=25)
+    amount = models.IntegerField()
+    receiver_name = models.CharField(max_length=25)
+
+    def __str__(self):
+        return self.sender_name

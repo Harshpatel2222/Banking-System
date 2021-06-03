@@ -263,3 +263,29 @@ View Customer
     color: white;
     text-decoration: none;
 }
+
+
+/* --------------
+
+Customer details
+
+--------------- */
+
+.customer-details h2 {
+    text-align: center;
+    margin: 20px 0px;
+    color: #a44a3f;
+}
+
+.transfer {
+    border: 1px solid #a44a3f;
+    background-color: #f0706765;
+    border-radius: 5px;
+    color: #a44a3f;
+    padding: 10px 25px;
+}
+
+.transfer:hover {
+    background-color: #a44a3f;
+    color: white;
+}
