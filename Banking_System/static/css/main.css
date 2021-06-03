@@ -226,3 +226,40 @@ body {
 .valid-feedback {
     color: #a44a3f;
 }
+
+
+/* -----------
+
+View Customer
+
+------------ */
+
+.customer-deatails h2 {
+    margin: 20px 0px;
+    text-align: center;
+    color: #a44a3f;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.thead {
+    background-color: #f0706791;
+    color: #a44a3f;
+}
+
+.view {
+    border: 1px solid #a44a3f;
+    color: #a44a3f;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 9px 25px;
+    background-color: #f0706765;
+}
+
+.view:hover {
+    background-color: #a44a3f;
+    color: white;
+    text-decoration: none;
+}
