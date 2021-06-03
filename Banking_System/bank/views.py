@@ -1,4 +1,4 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import redirect, render,get_object_or_404
 import requests
 
 # Create your views here.
@@ -36,6 +36,7 @@ def customer_details(request, pk):
         sender_name = customer.name
         customer_details = Transfer(sender_name=sender_name, amount=amount, receiver_name=receiver_name)
         customer_details.save()
+        return redirect('/')
         
     return render(request,'customer_details.html',context)
     
