@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@l6gfx@(425eyn*yxf3neju3#hh$r$*4vk!%45huz$_b#)%uzq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tsfbanksystem.herokuapp.com','127.0.0.1']
 
 
 # Application definition
