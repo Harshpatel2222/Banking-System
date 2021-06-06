@@ -8,7 +8,7 @@ from django.contrib import messages
 
 def home_view(request):
     context={}
-    return render(request,'index.html',context)
+    return render(request,'bank/index.html',context)
 
 def new_customer(request):
     if request.method == "POST":
@@ -17,12 +17,12 @@ def new_customer(request):
             form.save()
             messages.success(request, 'Your form has been submitted successfully!')
 
-    return render(request, "new_customer.html")
+    return render(request, "bank/new_customer.html")
     
 def view_customers(request):
     customers = Customer.objects.all()
     context={'customers' : customers}
-    return render(request,'view_customers.html',context)
+    return render(request,'bank/view_customers.html',context)
 
 def customer_details(request, pk):
     customer = Customer.objects.get(id = pk)
@@ -53,5 +53,5 @@ def customer_details(request, pk):
 
         return redirect('/')
         
-    return render(request,'customer_details.html',context)
+    return render(request,'bank/customer_details.html',context)
     
