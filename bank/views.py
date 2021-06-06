@@ -8,7 +8,7 @@ from django.contrib import messages
 
 def home_view(request):
     context={}
-    return render(request,'bank/index.html',context)
+    return render(request,"bank/index.html",context)
 
 def new_customer(request):
     if request.method == "POST":
@@ -22,7 +22,7 @@ def new_customer(request):
 def view_customers(request):
     customers = Customer.objects.all()
     context={'customers' : customers}
-    return render(request,'bank/view_customers.html',context)
+    return render(request,"bank/view_customers.html",context)
 
 def customer_details(request, pk):
     customer = Customer.objects.get(id = pk)
@@ -53,5 +53,5 @@ def customer_details(request, pk):
 
         return redirect('/')
         
-    return render(request,'bank/customer_details.html',context)
+    return render(request,"bank/customer_details.html",context)
     
