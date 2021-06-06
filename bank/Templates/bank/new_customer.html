@@ -1,4 +1,4 @@
-{% extends 'base.html' %}{% load static %} {% block title %}New Customer{% endblock title %} {%block body %} {% if messages %} {% for message in messages %}
+{% extends 'bank/base.html' %}{% load static %} {% block title %}New Customer{% endblock title %} {%block body %} {% if messages %} {% for message in messages %}
 <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <strong>{{ message }}</strong>
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
